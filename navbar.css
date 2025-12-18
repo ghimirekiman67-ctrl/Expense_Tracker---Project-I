@@ -1,0 +1,61 @@
+/* General Reset & Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color:  #4a86e8;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Bar Enhancements */
+nav {
+  transition: box-shadow 0.3s ease;
+}
+
+nav:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Brand Title */
+nav .text-xl {
+  letter-spacing: 0.5px;
+}
+
+/* Navigation Links */
+nav a {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #3b82f6; /* Tailwind blue-500 */
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Logout Icon */
+nav i.fas {
+  transition: transform 0.2s ease;
+}
+
+nav a:hover i.fas {
+  transform: rotate(-10deg);
+}
+
+/* Responsive Padding */
+@media (max-width: 768px) {
+  nav .flex {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+}
